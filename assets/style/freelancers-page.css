@@ -1,0 +1,131 @@
+.title {
+    display: grid;
+    place-items: center;
+    padding: 1.75rem 0.5rem;
+}
+
+.title h3 {
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--active-color);
+}
+
+.btn-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 1600;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    font-size: 0.7rem;
+}
+
+.profiles-container {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile {
+    background: var(--primary-dark-8);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.1fr 1fr;
+    transition: var(--transition);
+    border-radius: 15px 15px 15px 15px;
+    overflow: hidden;
+    box-shadow: var(--dark-shadow);
+}
+
+.profile:hover {
+    transform: scale(1.02);
+}
+
+.profile-info {
+    padding-left: 0.5rem;
+}
+
+.profile-info h3, 
+.profile-info h4,
+.profile-info p {
+    margin:0;
+}
+
+.profile-info h3 {
+    font-size: 1rem;
+}
+
+.profile-info h4 {
+    font-size: 0.75rem;
+}
+
+.profile-info p {
+    font-size: 0.6rem;
+}
+
+.profile-info button {
+    margin-top: 5px;
+    font-size: 0.5rem;
+}
+
+.profile-img {
+    max-width: 100px;
+    display: block;
+    height: auto;
+}
+
+.profile-img img {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+}
+
+@media screen and (min-width: 360px) {
+    .btn-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .btn-container {
+        grid-template-columns: auto auto auto;
+        margin-bottom: 4rem;
+    }
+    .btn {
+        font-size: 0.9rem !important; 
+    }
+    .profiles-container {
+        grid-template-columns: repeat(2, auto);
+    }
+    .profile-info {
+        padding-left: 2.5rem;
+    }
+    .profile-info h3 {
+        font-size: 2rem;
+    }
+    .profile-info h4 {
+        font-size: 1.2rem;
+    }
+    .profile-info h3,
+    .profile-info h4 {
+        margin-bottom: 5px;
+    }
+    .profile-info p {
+        font-size: 1rem;
+    }
+    .profile-img {
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .profile-img {
+        width: 200px;
+    }
+    
+    .profile-info {
+        padding-left: 0.5rem;
+    }
+}

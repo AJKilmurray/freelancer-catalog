@@ -1,0 +1,379 @@
+/*
+================
+
+    FONTS
+
+================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* 
+================
+
+    VARIABLES
+
+================
+*/
+
+:root {
+    /* Primary Color Shades */
+    --primary-dark-1: #020203;
+    --primary-dark-2: #030307;
+    --primary-dark-3: #05050a;
+    --primary-dark-4: #07070e;
+    --primary-dark-5: #090912;
+    --primary-dark-6: #0a0a15;
+    --primary-dark-7: #0c0c19;
+    --primary-dark-8: #0e0e1c;
+    --primary-dark-9: #0f0f20;
+    --primary: #111123;
+    --primary-light-1: #292939;
+    --primary-light-2: #41414f;
+    --primary-light-3: #585865;
+    --primary-light-4: #70707b;
+    --primary-light-5: #888891;
+    --primary-light-6: #a0a0a7;
+    --primary-light-7: #b8b8bd;
+    --primary-light-8: #cfcfd3;
+    --primary-light-9: #e7e7e9;
+
+    /* White --> Black */
+    --white: #fff;
+    --gray-1: #e6e6e6;
+    --gray-2: #cccccc;
+    --gray-3: #b3b3b3;
+    --gray-4: #999999;
+    --gray-5: #808080;
+    --gray-6: #666666;
+    --gray-7: #4c4c4c;
+    --gray-8: #333333;
+    --gray-9: #191919;
+    --black: #000;
+
+    /* Active Links */
+    --active-color: rgb(88, 180, 255);
+
+    /* Green & Red */
+    --green-1: hsl(125, 67%, 44%);
+    --green-2: hsl(125, 71%, 66%);
+    --red-1: hsl(360, 67%, 44%);
+    --red-2: hsl(360, 71%, 66%);
+
+    /* Fonts */
+    --font-primary: 'Raleway' , sans-serif;
+    --font-secondary: 'Inter', sans-serif;
+
+    /* Transition */
+    --transition: all 0.3s linear;
+
+    /* Other */
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+}
+
+/* 
+===============
+
+    Global
+    Styles
+
+===============
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-dark-8);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-light-1);
+}
+
+::selection {
+    background-color: rgba(0, 0, 0, 0.315);
+}
+
+body {
+    font-family: var(--font-secondary);
+    background: var(--primary);
+    color: var(--gray-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-primary);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: var(--gray-4);
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1, 
+    h2, 
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+/* 
+=================
+
+    Global
+    Classes
+
+=================
+*/
+
+.active {
+    color: var(--active-color) !important; 
+}
+
+.btn {
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--white);
+    padding: 0.375rem 0.75rem;
+    display:inline-block;
+    transition: var(--transition);
+    font-size: 0.875rem;
+    border: 2px solid var(--white);
+    cursor: pointer;
+    box-shadow: var(--light-shadow);
+    border-radius: var(--radius);
+}
+
+.btn:hover {
+    color: var(--gray-3);
+}
+
+/* Section */ 
+.section {
+    padding-bottom: 5rem;
+}
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+/* Nav */
+header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(../images/home-background.jpg) center/cover no-repeat;
+}
+
+nav {
+    background: var(--primary-dark-8);
+    padding: 1rem 1.5rem;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-header h3 {
+    margin-bottom: 0;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    color: var(--gray-1);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color: var(--gray-5);
+}
+
+.logo {
+    max-width: 50px;
+    height: auto;
+}
+
+.links-container {
+    height:0;
+    overflow:hidden;
+    transition: var(--transition);
+}
+
+.show-links {
+    height: 200px;
+}
+
+.links a {
+    background: transparent;
+    color: var(--white);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    display:block;
+    transition: var(--transition);
+    font-weight: bold;
+    padding: 0.75rem 0;
+}
+
+.links a:hover {
+    color: var(--gray-3);
+}
+
+@media screen and (min-width: 800px) {
+    .nav-center {
+        width: 90vw;
+        max-width: 1600px;
+        margin: 0 auto;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-header {
+        padding:0;
+    }
+
+    .nav-header h3 {
+        margin: 0 1rem;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .links-container {
+        height: auto !important;
+    }
+
+    .links {
+        display: flex;
+    }
+
+    .links a {
+        margin: 0 1rem;
+    }
+}
+
+/* Main */
+main {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+
+.banner {
+    min-height: 85vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.banner p {
+    font-size: 1.25rem;
+}
+
+@media screen and (min-width: 1000px) {
+    .banner button {
+        display: block;
+        margin: 0 auto;
+        font-size: 1.5rem;
+    }
+}
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    transition: var(--transition);
+    background: var(--primary-dark-9);
+    width: 100%;
+}
+
+.hide-preloader{
+    visibility: hidden;
+    z-index: -999;
+}
