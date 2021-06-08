@@ -1,3 +1,3 @@
-function homeRedirect() {
+function bannerRedirect() {
     window.location.href = 'freelancers.html';
 }

@@ -1,4 +1,5 @@
 import { profiles } from "./profilesConfig.js";
+import { toggleModal } from "./profileModal.js";
 
 const profilesParent = document.querySelector('.section-center');
 const btnsContainer = document.querySelector('.btn-container');
@@ -11,20 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 function displayFreelancers(profiles) {
     let freelancers = profiles.map((freelancer) => {
         const profile = freelancer.department;
-        if (typeof profile === 'string') { // If freelancer has one department
-            return `<article class="profile">
-                    <img src="${freelancer.img}" class="profile-img" alt="Profile Picture of ${freelancer.name}">
-                    <div class="profile-info">
-                        <div class="heading">
-                            <h3>${freelancer.name}</h3>
-                            <h4 class="department">${freelancer.department}</h4>
-                        </div>
-                        <p>Total Commissions: ${freelancer.completed}</p>
-                        <p>Average Rating: ${freelancer.avgRating} (${freelancer.totalRatings})</p>
-                        <button class="btn">view profile</button>
-                    </div>
-                </article>`;
-        } else if (typeof profile === 'object') { // If freelancer has more than one departments
+        if (typeof profile === 'object') { // If freelancer has one department
             return `<article class="profile">
                     <img src="${freelancer.img}" class="profile-img" alt="Profile Picture of ${freelancer.name}">
                     <div class="profile-info">
@@ -34,7 +22,7 @@ function displayFreelancers(profiles) {
                         </div>
                         <p>Total Commissions: ${freelancer.completed}</p>
                         <p>Average Rating: ${freelancer.avgRating} (${freelancer.totalRatings})</p>
-                        <button class="btn">view profile</button>
+                        <button class="btn view" data-profile="${freelancer.name}">view profile</button>
                     </div>
                 </article>`;
         }
@@ -50,11 +38,7 @@ function displayFreelancers(profiles) {
 function displayButtons() {
 
     const departments = profiles.reduce((values, profile) => {
-        if (typeof profile.department === 'string') { // If freelancer has one department
-            if (!values.includes(profile.department)) {
-                values.push(profile.department);
-            }
-        } else if (typeof profile.department === 'object') { // If freelancer has more than one department
+        if (typeof profile.department === 'object') { // If freelancer has more than one department
             for (let i in profile.department) {
                 if (!values.includes(profile.department[i])) {
                   values.push(profile.department[i]);
@@ -73,14 +57,9 @@ function displayButtons() {
     filterBtns.forEach((btn) => {
         btn.addEventListener('click', (e) => {
             const department = e.currentTarget.dataset.id;
-
             const departmentCategory = profiles.filter((currentProfile) => {
                 const profile = currentProfile.department;
-                if (typeof profile === 'string') { // If freelancer has one department
-                    if (profile === department) {
-                        return currentProfile;
-                    }
-                } else if (typeof profile === 'object') { // If freelancer has more than one department
+                if (typeof profile === 'object') { // If freelancer has more than one department
                     for (let i in profile) {
                       if (profile[i] === department) {
                         console.log();
@@ -94,6 +73,7 @@ function displayButtons() {
             } else {
                 displayFreelancers(departmentCategory); // Displays selected button category
             }
+            toggleModal();
         });
     });
 }
