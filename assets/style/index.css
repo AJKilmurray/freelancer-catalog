@@ -388,7 +388,6 @@ main {
     align-items: center;
     justify-content: center;
     visibility: visible;
-    transition: var(--transition);
     background: var(--primary-dark-9);
     width: 100%;
 }
@@ -407,6 +406,7 @@ main {
 }
 
 .hide-clipboard {
-    visibility: hidden;
-    z-index: -1000;
+    display: none !important;
+    visibility: hidden !important;
+    z-index: -999;
 }

@@ -14,17 +14,17 @@ function displayFreelancers(profiles) {
         const profile = freelancer.department;
         if (typeof profile === 'object') { // If freelancer has one department
             return `<article class="profile">
-                    <img src="${freelancer.img}" class="profile-img" alt="Profile Picture of ${freelancer.name}">
-                    <div class="profile-info">
-                        <div class="heading">
-                            <h3>${freelancer.name}</h3>
-                            <h4 class="department">${freelancer.department.join(', ')}</h4>
+                        <img src="${freelancer.img}" class="profile-img" alt="Profile Picture of ${freelancer.name}">
+                        <div class="profile-info">
+                            <div class="heading">
+                                <h3>${freelancer.name}</h3>
+                                <h4 class="department">${freelancer.department.join(', ')}</h4>
+                            </div>
+                            <p>Total Commissions: ${freelancer.completed}</p>
+                            <p>Average Rating: ${freelancer.avgRating} (${freelancer.totalRatings})</p>
+                            <button class="btn view" data-profile="${freelancer.name}">view profile</button>
                         </div>
-                        <p>Total Commissions: ${freelancer.completed}</p>
-                        <p>Average Rating: ${freelancer.avgRating} (${freelancer.totalRatings})</p>
-                        <button class="btn view" data-profile="${freelancer.name}">view profile</button>
-                    </div>
-                </article>`;
+                    </article>`;
         }
     });
     const randomizedOrder = freelancers // Randomizes the order of profiles

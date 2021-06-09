@@ -100,13 +100,13 @@
 }
 
 .modal-card {
-    background: var(--primary-dark-9);
+    background: var(--white);
     height: 80vh;
     width: 80vw;
     max-width: 1400px;
-    border-radius: 25px;
     box-shadow: var(--dark-shadow);
     overflow: auto;
+    color: var(--black);
 }
 
 ::-webkit-scrollbar {
@@ -115,11 +115,12 @@
 
 .modal-card .modal-header {
     width: 100%;
-    background: var(--primary-dark-7);
+    background: var(--black);
     display: flex;
     justify-content: space-between;
     padding: 0.5rem;
-    border-radius: 25px 25px 0 0;
+    color: var(--white);
+    box-shadow: var(--light-shadow);
 }
 
 .modal-header .header-text {
@@ -174,24 +175,32 @@
 
 .modal-profile .department-header,
 .modal-profile .specialties-header {
-    border-bottom: 2px solid var(--primary-dark-6);
     padding: 10px;
+    box-shadow: var(--light-shadow);
+    border-radius: var(--radius);
+    transition: var(--transition);
 }
 
-.modal-profile .department-header {
-    margin-top: 1rem;
+.modal-profile .department-header,
+.modal-profile .specialties-header {
+    margin-top: 0.5rem;
+}
+
+.modal-profile .department-header:hover,
+.modal-profile .specialties-header:hover {
+    transform: scale(1.05);
 }
 
 .personal-details {
     margin-top: 1rem;
     display: grid;
     grid-template-columns: auto;
-    gap: 2rem;
     padding: 1rem;
+    gap: 2rem;
 }
 
 .profile-card {
-    background: var(--primary-dark-7);
+    background: var(--white);
     padding: 1.5rem;
     border-radius: 15px;
     box-shadow: var(--light-shadow);
@@ -210,7 +219,9 @@
 }
 
 .profile-card p {
-    color: var(--white);
+    color: var(--black);
+    max-width: 100%;
+    display: inline-block;
 }
 
 .profile-card a {
@@ -220,16 +231,17 @@
 .contact-btn {
     background: transparent;
     padding: 0.375rem 0.75rem;
-    border: 2px solid var(--white);
-    color: var(--white);
+    border: 2px solid var(--black);
+    color: var(--black);
     border-radius: var(--radius);
     cursor: pointer;
     transition: var(--transition);
     display: inline-block;
+    font-weight: bold;
 }
 
 .contact-btn:hover {
-    color: var(--gray-3);
+    color: var(--active-color);
 }
 
 @media screen and (min-width: 360px) {
@@ -267,9 +279,13 @@
     .profile-img {
         max-width: 200px;
     }
+    .modal-card {
+        height: 65vh !important;
+        min-height: 60vh;
+    }
     .personal-details {
-        grid-template-columns: auto auto auto;
-        gap: 4rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
     }
 }
 
@@ -281,4 +297,15 @@
     .profile-info {
         padding-left: 0.5rem;
     }
+}
+
+.clipboard {    
+    z-index: -1000;
+    position: absolute;
+    top:0;
+    width: 1px;
+    height: 1px;
+    background-color: var(--primary-dark-8);
+    color: var(--primary-dark-8);
+    border: 0;
 }
