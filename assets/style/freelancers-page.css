@@ -181,7 +181,10 @@
     transition: var(--transition);
 }
 
-.modal-profile .department-header,
+.modal-profile .department-header {
+    margin-top: 1rem;
+}
+
 .modal-profile .specialties-header {
     margin-top: 0.5rem;
 }
@@ -244,6 +247,11 @@
     color: var(--active-color);
 }
 
+.modal-footer {
+    text-align: center;
+    padding: 2rem;
+}
+
 @media screen and (min-width: 360px) {
     .btn-container {
         grid-template-columns: auto auto auto;
@@ -279,10 +287,6 @@
     .profile-img {
         max-width: 200px;
     }
-    .modal-card {
-        height: 65vh !important;
-        min-height: 60vh;
-    }
     .personal-details {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
@@ -308,4 +312,8 @@
     background-color: var(--primary-dark-8);
     color: var(--primary-dark-8);
     border: 0;
+}
+
+.fa-clipboard {
+    color: var(--active-color);
 }

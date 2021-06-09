@@ -398,15 +398,3 @@ main {
 }
 
 /* Clipboard Pop-up */
-.show-clipboard-popup {
-    z-index: 1000;
-    visibility: visible;
-    height: 0;
-    width: 200px;
-}
-
-.hide-clipboard {
-    display: none !important;
-    visibility: hidden !important;
-    z-index: -999;
-}

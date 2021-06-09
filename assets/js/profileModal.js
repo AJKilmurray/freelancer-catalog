@@ -30,47 +30,50 @@ export function toggleModal() {
                     specialtiesOutput = specialtiesOutput.join(""); // Stores all specialties in a single string to be parsed to HTML
                 }
                 const modalProfile = `<article class="modal-card">
-                            <div class="modal-header">
-                                <div class="header-text">
-                                    <img src="../images/profiles/${profile.name}.png" class="modal-img">
-                                    <h3>${profile.name}</h3>
-                                </div>
-                                <button class="close-btn">
-                                    <i class="fas fa-times fa-lg exit" onclick="closeModal();"></i>
-                                </button>
-                            </div>
-                            <div class="modal-profile">
-                                <div class="departments">
-                                    <h4 class="department-header">Departments</h3>
-                                    <h5>${profileDepartments}</h5>
-                                </div>
-                                <div class="specialties">
-                                    <h4 class="specialties-header">Specialties</h3>
-                                    ${specialtiesOutput}
-                                </div>
-                            </div>
-                            <div class="personal-details">
-                                <div class="discord-name profile-card">
-                                    <h3>Contact</h3>
-                                    <br>
-                                    <p>Contact ${profile.name} through discord!</p>
-                                    <br>
-                                    <button class="contact-btn" id="profile-discord">${profile.discord}</button>
-                                </div>
-                                <div class="portfolio profile-card">
-                                    <h3>Portfolio</h3>
-                                    <br>
-                                    <p>Check out ${profile.name}'s portfolio <a href="${profile.portfolio}" target="_blank">here</a>.</p>
-                                </div>
-                                <div class="ratings-info profile-card">
-                                    <h3>Ratings</h3>
-                                    <br>
-                                    <p>Total Commissions: ${profile.completed}</p>
-                                    <br>
-                                    <p>Average Rating: ${profile.avgRating} (${profile.totalRatings})</p>
-                                </div>
-                            </div>
-                        </article> `;
+                <div class="modal-header">
+                    <div class="header-text">
+                        <img src="../images/profiles/${profile.name}.png" class="modal-img">
+                        <h3>${profile.name}</h3>
+                    </div>
+                    <button class="close-btn">
+                        <i class="fas fa-times fa-lg exit" onclick="closeModal();"></i>
+                    </button>
+                </div>
+                <div class="modal-profile">
+                    <div class="departments">
+                        <h4 class="department-header">Departments</h3>
+                        <h5>${profileDepartments}</h5>
+                    </div>
+                    <div class="specialties">
+                        <h4 class="specialties-header">Specialties</h3>
+                        ${specialtiesOutput}
+                    </div>
+                </div>
+                <div class="personal-details">
+                    <div class="discord-name profile-card">
+                        <h3>Contact</h3>
+                        <br>
+                        <p>Contact ${profile.name} through discord!</p>
+                        <br>
+                        <button class="contact-btn" id="profile-discord">${profile.discord}<i class="fas fa-clipboard"></i></button>
+                    </div>
+                    <div class="portfolio profile-card">
+                        <h3>Portfolio</h3>
+                        <br>
+                        <p>Check out ${profile.name}'s portfolio <a href="${profile.portfolio}" target="_blank">here</a>.</p>
+                    </div>
+                    <div class="ratings-info profile-card">
+                        <h3>Ratings</h3>
+                        <br>
+                        <p>Total Commissions: ${profile.completed}</p>
+                        <br>
+                        <p>Average Rating: ${profile.avgRating} (${profile.totalRatings})</p>
+                    </div>
+                </div>
+                <footer class="modal-footer"> 
+                    <p>If you encounter any bugs, please report them <a href="">here</a>. Thank you!</p>
+                </footer>
+                </article> `;
                 modal.innerHTML = modalProfile;
                 const profileDiscord = document.getElementById('profile-discord');
                 profileDiscord.addEventListener('click', (e) => {
