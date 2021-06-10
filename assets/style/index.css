@@ -99,7 +99,8 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+    height: 10px;
+    width: 0px;
 }
 
 ::-webkit-scrollbar-corner {
@@ -117,7 +118,7 @@ html {
 }
 
 ::selection {
-    background-color: rgba(0, 0, 0, 0.315);
+    background-color: rgba(41, 41, 57, 0.8);
 }
 
 body {
