@@ -55,7 +55,7 @@ export function toggleModal() {
                         <br>
                         <p>Contact ${profile.name} through discord!</p>
                         <br>
-                        <button class="contact-btn" id="profile-discord">${profile.discord}<i class="fas fa-clipboard"></i></button>
+                        <button class="contact-btn" id="profile-discord">${profile.discord} <i class="fas fa-clipboard"></i></button>
                     </div>
                     <div class="portfolio profile-card">
                         <h3>Portfolio</h3>
