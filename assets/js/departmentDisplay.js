@@ -40,17 +40,17 @@ function departmentButtons(config) {
         btn.addEventListener('click', (e) => {
             let departmentSpecialties = config.map((department) => {
                 const specialties = department.specialties;
-                let idx = 0;
-                for (let i of specialties) {
+                let index = 0;
+                for (let specialty of specialties) {
                     if (i === e.currentTarget.dataset.specialty) {
                         const header = e.currentTarget.parentNode.parentNode.children[1].children[0];
                         const description = e.currentTarget.parentNode.parentNode.children[1].children[1];
                         const freelancerNumber = e.currentTarget.parentNode.parentNode.children[1].children[2];
-                        header.textContent = `${i}`
-                        description.textContent = `${department.specialtyDescription[idx]}`;
-                        freelancerNumber.innerHTML = `${department.specialties[idx]} Freelancers: <span class="freelancer-count">${department.numOfFreelancers[idx]}</span>`;
+                        header.textContent = `${specialty}`
+                        description.textContent = `${department.specialtyDescription[index]}`;
+                        freelancerNumber.innerHTML = `${department.specialties[index]} Freelancers: <span class="freelancer-count">${department.numOfFreelancers[index]}</span>`;
                     }
-                    idx++;
+                    index++;
                 }
             });
             return departmentSpecialties;
