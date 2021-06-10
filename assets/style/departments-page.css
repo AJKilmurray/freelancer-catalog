@@ -1,3 +1,73 @@
 #departments {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(../images/departments-bg.jpg) center/cover no-repeat;
+    box-shadow: var(--light-shadow);
+}
+
+.btn a {
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.btn a:hover {
+    color: var(--gray-3);
+}
+
+.section {
+    background-color: var(--white);
+    min-height: 100vh;
+    padding-top: 4rem;
+}
+
+.department h2{
+    text-align: center;
+    padding: 1rem;
+}
+
+.department {
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--black);
+    background-color: var(--white);
+    border-radius: var(--radius);
+    overflow:hidden;
+    box-shadow: var(--dark-shadow);
+    margin-bottom: 3rem;
+}
+
+.specialties {
+    margin: 0;
+    display: flex;
+    overflow: auto;
+    cursor: pointer;
+    text-align: center;
+}
+
+.specialties h4 {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 1rem;
+    border-left: 1px solid var(--gray-8);
+    width: 100%;
+    white-space: nowrap;
+    background-color: var(--primary-dark-9);
+}
+
+.specialties h4:nth-child(1) {
+    border: none;
+}
+
+.specialties h4:hover {
+    color: var(--active-color);
+    background-color: var(--primary);
+}
+
+.specialties-content {
+    padding: 1.5rem;
+}
+
+.freelancer-count {
+    color: var(--active-color);
 }
