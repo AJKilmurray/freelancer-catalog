@@ -42,7 +42,7 @@ function departmentButtons(config) {
                 const specialties = department.specialties;
                 let index = 0;
                 for (let specialty of specialties) {
-                    if (i === e.currentTarget.dataset.specialty) {
+                    if (specialty === e.currentTarget.dataset.specialty) {
                         const header = e.currentTarget.parentNode.parentNode.children[1].children[0];
                         const description = e.currentTarget.parentNode.parentNode.children[1].children[1];
                         const freelancerNumber = e.currentTarget.parentNode.parentNode.children[1].children[2];
