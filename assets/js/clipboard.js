@@ -1,5 +1,5 @@
-const clipboard = document.querySelector('.clipboard');
-const popupConfirmation = document.querySelector('.hide-clipboard');
+const clipboard = document.querySelector('.clipboard-textarea');
+const popupConfirmation = document.querySelector('.clipboard');
 
 export function copy(item) {
     const getText = (item.textContent);
@@ -7,13 +7,12 @@ export function copy(item) {
     clipboard.select();
     clipboard.setSelectionRange(0, 99999)
     document.execCommand("copy");
-    confirmCopy(getText);
+    confirmCopy();
 }
 
-function confirmCopy(copiedText) {
-    popupConfirmation.classList.add('show-popup-clipboard')
-    popupConfirmation.innerHTML = `<p>${copiedText} has been copied to your clipboard.</p>`;
+function confirmCopy() {
+    popupConfirmation.classList.add('show-clipboard')
     setTimeout(() => {
-        popupConfirmation.classList.remove('show-pop-clipboard');
-    }, 8000);
+        popupConfirmation.classList.remove('show-clipboard');
+    }, 2000);
 }

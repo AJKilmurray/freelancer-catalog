@@ -13,7 +13,7 @@
 }
 
 .section {
-    background-color: var(--white);
+    background-color: transparent;
     min-height: 100vh;
     padding-top: 4rem;
 }
@@ -21,13 +21,14 @@
 .department h2{
     text-align: center;
     padding: 1rem;
+    color: var(--active-color);
 }
 
 .department {
     max-width: 1000px;
     margin: 0 auto;
-    color: var(--black);
-    background-color: var(--white);
+    color: var(--white);
+    background-color: var(--primary-dark-8);
     border-radius: var(--radius);
     overflow:hidden;
     box-shadow: var(--dark-shadow);
@@ -52,11 +53,11 @@
     border-left: 1px solid var(--gray-8);
     width: 100%;
     white-space: nowrap;
-    background-color: var(--primary-dark-9);
+    background-color: var(--primary-dark-7);
 }
 
 .specialties h4:nth-child(1) {
-    border: none;
+    border-left: none;
 }
 
 .specialties h4:hover {
