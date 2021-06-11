@@ -10,7 +10,6 @@
 
 */
 
-
 export const departments = [
     {
         id: 1,
