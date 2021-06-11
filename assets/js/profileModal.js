@@ -32,7 +32,7 @@ export function toggleModal() {
                 const modalProfile = `<article class="modal-card">
                 <div class="modal-header">
                     <div class="header-text">
-                        <img src="../images/profiles/${profile.name}.png" class="modal-img">
+                        <img src="../${profile.img}" class="modal-img">
                         <h3>${profile.name}</h3>
                     </div>
                     <button class="close-btn">
