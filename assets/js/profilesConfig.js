@@ -80,7 +80,7 @@ export const profiles = [
     completed: 25,
     avgRating: 4.79,
     totalRatings: 24,
-    img: "../images/profiles/ScreaM.png",
+    img: "../images/profiles/scream.png",
   },
   {
     id: 6,
@@ -114,7 +114,7 @@ export const profiles = [
     completed: 17,
     avgRating: "5.00",
     totalRatings: 17,
-    img: "../images/profiles/Tree.png",
+    img: "../images/profiles/tree.png",
   },
   {
     id: 8,
@@ -126,7 +126,7 @@ export const profiles = [
     completed: 32,
     avgRating: 4.74,
     totalRatings: 31,
-    img: "../images/profiles/GoooDZss.png",
+    img: "../images/profiles/gooodzss.png",
   },
   {
     id: 9,
@@ -138,7 +138,7 @@ export const profiles = [
     completed: 22,
     avgRating: 4.86,
     totalRatings: 21,
-    img: "../images/profiles/Niko.png",
+    img: "../images/profiles/niko.png",
   },
   {
     id: 10,
@@ -150,7 +150,7 @@ export const profiles = [
     completed: 4,
     avgRating: 4.25,
     totalRatings: 4,
-    img: "../images/profiles/Fox.png",
+    img: "../images/profiles/fox.png",
   },
   {
     id: 1,
