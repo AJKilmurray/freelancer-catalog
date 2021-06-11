@@ -102,7 +102,7 @@ export const profiles = [
     completed: 25,
     avgRating: 4.83,
     totalRatings: 24,
-    img: "../images/profiles/iRobSch.png",
+    img: "../images/profiles/irobsch.png",
   },
   {
     id: 7,
