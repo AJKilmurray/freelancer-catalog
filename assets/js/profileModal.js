@@ -71,7 +71,7 @@ export function toggleModal() {
                     </div>
                 </div>
                 <footer class="modal-footer"> 
-                    <p>If you encounter any bugs, please report them <a href="">here</a>. Thank you!</p>
+                    <p>If you encounter any bugs, please report them <a href="https://docs.google.com/forms/d/1kiruPf-F-9kbY8tCPsd2vykjMePEl3pO-0KFeQT1iDw/" target="_blank">here</a>. Thank you!</p>
                 </footer>
                 </article> `;
                 modal.innerHTML = modalProfile;

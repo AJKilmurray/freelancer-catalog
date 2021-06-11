@@ -340,3 +340,7 @@
 .fa-clipboard {
     color: var(--active-color);
 }
+
+.modal-footer a {
+    color: var(--active-color);
+}

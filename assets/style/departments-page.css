@@ -50,7 +50,7 @@
     align-items: center;
     margin: 0;
     padding: 1rem;
-    border-left: 1px solid var(--gray-8);
+    border-left: 1px solid var(--primary);
     width: 100%;
     white-space: nowrap;
     background-color: var(--primary-dark-7);
