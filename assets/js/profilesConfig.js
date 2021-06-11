@@ -102,7 +102,7 @@ export const profiles = [
     completed: 25,
     avgRating: 4.83,
     totalRatings: 24,
-    img: "../images/profiles/irobsch.png",
+    img: "../images/profiles/iRobSch.png",
   },
   {
     id: 7,
@@ -114,7 +114,7 @@ export const profiles = [
     completed: 17,
     avgRating: "5.00",
     totalRatings: 17,
-    img: "../images/profiles/tree.png",
+    img: "../images/profiles/Tree.png",
   },
   {
     id: 8,
@@ -126,7 +126,7 @@ export const profiles = [
     completed: 32,
     avgRating: 4.74,
     totalRatings: 31,
-    img: "../images/profiles/gooodzss.png",
+    img: "../images/profiles/GoooDZss.png",
   },
   {
     id: 9,
@@ -138,7 +138,7 @@ export const profiles = [
     completed: 22,
     avgRating: 4.86,
     totalRatings: 21,
-    img: "../images/profiles/niko.png",
+    img: "../images/profiles/Niko.png",
   },
   {
     id: 10,
@@ -150,7 +150,7 @@ export const profiles = [
     completed: 4,
     avgRating: 4.25,
     totalRatings: 4,
-    img: "../images/profiles/fox.png",
+    img: "../images/profiles/Fox.png",
   },
   {
     id: 1,
