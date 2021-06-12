@@ -273,7 +273,7 @@ export const profiles = [
     name: "Spaget",
     discord: "Spaget#7087",
     department: ['Setups'],
-    specialties: ['Server Setup'],
+    specialties: ['Server Setup', 'Configurator', 'BuyCraft Setups'],
     portfolio: "https://spaget-services.com/",
     completed: 7,
     avgRating: '5.00',
@@ -306,7 +306,7 @@ export const profiles = [
   },
   {
     id: 24,
-    name: "ByLion",
+    name: "ByLioh",
     discord: "ByLioh#0360",
     department: ['Building'],
     specialties: ['Builder', 'Builder+', 'Organic'],
