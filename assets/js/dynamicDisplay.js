@@ -62,7 +62,6 @@ function displayButtons() {
                 if (typeof profile === 'object') { // If freelancer has more than one department
                     for (let i in profile) {
                       if (profile[i] === department) {
-                        console.log();
                         return profile[i];
                       }
                     }
