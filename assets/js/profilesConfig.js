@@ -151,7 +151,7 @@ export const profiles = [
   {
     id: 11,
     name: "Abdi",
-    discord: "Abdi#635",
+    discord: "Abdi#6351",
     department: ['Design', 'Video'],
     specialties: ['GFX Designer', 'Vector Artist', 'Motion', 'Intro Creator'],
     portfolio: "https://behance.net/abdims",
