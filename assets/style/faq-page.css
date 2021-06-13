@@ -1,7 +1,6 @@
 .title {
     padding: 2rem;
     text-align: center;
-    margin-bottom: 1rem;
 }
 
 .title h3 {
@@ -11,7 +10,7 @@
 }
 
 .question {
-    padding: 2rem;
+    padding: 1rem;
     max-width: 1000px;
     margin: 0 auto;
     box-shadow: var(--light-shadow);
@@ -27,6 +26,7 @@
 }
 
 .question-title h3 {
+    font-size: 1rem;
     margin-bottom: 0;
     text-transform: none;
 }
@@ -41,7 +41,6 @@
 }
 
 .question-answer {
-    margin-top: 1rem;
     height: 0;
     overflow: hidden;
     transition: height .8s ease-in-out;
@@ -49,7 +48,6 @@
 
 .question-answer p {
     margin-bottom: 0;
-    border-top: 1px solid var(--active-color);
     padding-top: 1rem;
 }
 
@@ -63,4 +61,18 @@
 
 .highlight-white {
     color: var(--gray-2);
+}
+
+@media screen and (min-width: 800px) {
+    .title {
+        margin-bottom: 1rem;
+    }
+
+    .question {
+        padding: 2rem;
+    }
+
+    .question-title h3 {
+        font-size: 2rem;
+    }
 }
