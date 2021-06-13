@@ -86,6 +86,7 @@
     z-index: -999;
     visibility: hidden;
     display: none;
+    transition: var(--transition);
 }
 
 .open-modal .modal{
@@ -107,6 +108,7 @@
     box-shadow: var(--dark-shadow);
     overflow: auto;
     color: var(--black);
+    transition: var(--transition);
 }
 
 ::-webkit-scrollbar {
