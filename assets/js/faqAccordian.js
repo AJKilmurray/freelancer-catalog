@@ -1,5 +1,5 @@
 export function accordianButtons() {
-    const btns = document.querySelectorAll('.toggle-accordian');
+    const btns = document.querySelectorAll('.toggle-accordian'); // All accordian buttons
     btns.forEach((btn) => { // Each accordian
         btn.addEventListener('click', (accordian) => { // Event listener on each accordian button
             const answer = accordian.currentTarget.parentNode.parentNode.children[1]; // Parent of the answer 
@@ -10,9 +10,9 @@ export function accordianButtons() {
                 icon.classList.remove('fa-chevron-down'); 
                 icon.classList.add('fa-chevron-up'); // Replaces the icon with an up arrow instead of a down arrow, to indicate that the accordian can be closed.
             } else if (icon.classList.contains('fa-chevron-up')) { // If the accordian is open
-                answer.style.height = `0px`;
+                answer.style.height = `0px`; // Resets the height of the answerText parent element to 0px
                 icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down');
+                icon.classList.add('fa-chevron-down'); // Replaces the icon with a down arrow instead of an up arrow, to indicate that the accordian can be opened.
             }
         });
     });
