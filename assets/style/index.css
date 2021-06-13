@@ -5,7 +5,7 @@
 
 ================
 */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* 
@@ -61,7 +61,7 @@
     --red-2: hsl(360, 71%, 66%);
 
     /* Fonts */
-    --font-primary: 'Roboto',
+    --font-primary: 'Inter',
     sans-serif;
     --font-secondary: 'Roboto',
     sans-serif;
