@@ -42,7 +42,9 @@
 
 .question-answer {
     margin-top: 1rem;
-    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height .8s ease-in-out;
 }
 
 .question-answer p {
@@ -53,10 +55,6 @@
 
 .question-answer p a {
     color: var(--active-color);
-}
-
-.show-answer {
-    display: block;
 }
 
 .highlight {

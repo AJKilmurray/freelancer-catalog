@@ -15,7 +15,7 @@ function displayAccordians(config) {
                     <i class="fas fa-chevron-down toggle-accordian icon"></i>
                 </div>
                 <div class="question-answer">
-                    <p>${question.answer}</p>
+                    <p class="answer">${question.answer}</p>
                 </div>
             </article>`;
     }).join('');
