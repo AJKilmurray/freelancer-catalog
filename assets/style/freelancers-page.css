@@ -35,7 +35,6 @@
     display: grid;
     align-items: center;
     grid-template-columns: 0.1fr 1fr;
-    transition: var(--transition);
     border-radius: 15px 15px 15px 15px;
     overflow: hidden;
     box-shadow: var(--dark-shadow);
@@ -49,10 +48,10 @@
     padding-left: 0.5rem;
 }
 
-.profile-info h3, 
+.profile-info h3,
 .profile-info h4,
 .profile-info p {
-    margin:0;
+    margin: 0;
 }
 
 .profile-info h3 {
@@ -89,7 +88,7 @@
     transition: var(--transition);
 }
 
-.open-modal .modal{
+.open-modal .modal {
     z-index: 999;
     visibility: visible;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
@@ -264,31 +263,40 @@
     .btn-container {
         margin-bottom: 4rem;
     }
+
     .btn {
         font-size: 0.9rem !important;
     }
+
     .profiles-container {
         grid-template-columns: repeat(2, auto);
     }
+
     .profile-info {
         padding-left: 2.5rem;
     }
+
     .profile-info h3 {
         font-size: 2rem;
     }
+
     .profile-info h4 {
         font-size: 1.2rem;
     }
+
     .profile-info h3,
     .profile-info h4 {
         margin-bottom: 5px;
     }
+
     .profile-info p {
         font-size: 1rem;
     }
+
     .profile-img {
         max-width: 200px;
     }
+
     .personal-details {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
@@ -299,16 +307,16 @@
     .profile-img {
         width: 200px;
     }
-    
+
     .profile-info {
         padding-left: 0.5rem;
     }
 }
 
-.clipboard-textarea {    
+.clipboard-textarea {
     z-index: -1000;
     position: absolute;
-    top:0;
+    top: 0;
     width: 1px;
     height: 1px;
     background-color: var(--primary-dark-8);
