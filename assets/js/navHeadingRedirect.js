@@ -10,5 +10,5 @@ navHeading.addEventListener("click", () => {
 });
 
 function navHeaderRedirect() {
-	window.location.href = "/index.html";
+	window.location.href = "/freelancer-catalog/index.html";
 }
